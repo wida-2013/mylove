@@ -52,6 +52,16 @@ try {
     }
 })
 
+
+app.get('/checkin', async (req, res) => {
+        res.header("Content-Type", 'application/json');
+        res.send(JSON.stringify({
+            status: true,
+            result: 'halo gan?'
+        }, null, 4));
+})
+
+
 app.get('*', async (req, res) => {
 	res.header("Content-Type", 'application/json');
   	res.send(JSON.stringify({
